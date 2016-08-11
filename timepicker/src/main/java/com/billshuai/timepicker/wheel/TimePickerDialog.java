@@ -17,10 +17,10 @@ import java.util.Calendar;
  */
 public class TimePickerDialog extends Dialog {
 
-    private int minYear = 1950; // 最小年份
-    private int yearSize = 100; // 总共年份
+    private int minYear = 1950; // minimum year
+    private int yearSize = 100; // sum years
     private WheelView yearWheel, monthWheel, dayWheel, hourWheel, minuteWheel,
-            secondWheel;//定义组件年月日时分秒
+            secondWheel;
     public String[] yearContent = null;
     public String[] monthContent = null;
     public String[] dayContent = null;
@@ -32,7 +32,7 @@ public class TimePickerDialog extends Dialog {
 
     boolean isClick = false;
 
-    int layoutRes;//布局文件
+    int layoutRes;//layout file
     Context context;
 
     public TimePickerDialog(Context context) {
@@ -114,7 +114,7 @@ public class TimePickerDialog extends Dialog {
                         .append(secondWheel.getCurrentItemValue());
                 textView.setText(sb);
                 cancelDatePickerDialog();
-                //登录成功发送广播
+                //send broadcast
                 Intent sendIntent = new Intent();
                 sendIntent.setAction("GetTimeValue");
                 sendIntent.putExtra("TimeValue", sb.toString());

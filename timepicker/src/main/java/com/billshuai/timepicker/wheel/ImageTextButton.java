@@ -16,7 +16,6 @@ public class ImageTextButton extends Button
 	{
 		super(context, attrs);
 		setClickable(true);
-		// 默认使用R.drawable.icon这张图片，通过icon这个属性来获取图片
 //		resourceId = attrs.getAttributeResourceValue(namespace, "icon", R.drawable.icon);
 		bitmap = BitmapFactory.decodeResource(getResources(), resourceId);
 		this.setTextSize(12);
@@ -25,7 +24,6 @@ public class ImageTextButton extends Button
 	@Override
 	protected void onDraw(Canvas canvas)
 	{
-		// 图片顶部居中显示
 		int x = (this.getMeasuredWidth() - bitmap.getWidth()) >> 1;
 		int y = 0;
 		canvas.drawBitmap(bitmap, x, y, null);

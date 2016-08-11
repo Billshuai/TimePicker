@@ -54,7 +54,6 @@ public class StrericWheelAdapter implements WheelAdapter {
 		return strContents.length;
 	}
 	/**
-	 * 璁剧疆鏈�ぇ鐨勫搴�
 	 */
 	public int getMaximumLength() {
 		int maxLen=5;
