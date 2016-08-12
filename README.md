@@ -11,6 +11,12 @@ Download the project,and Copy the timepicker file to your project,finally,
 dependencies {
      compile project(':timepicker')
 }
+
+OR
+
+dependencies {
+     compile 'com.billshuai.timepicker:timepicker:1.0.1'
+}
 ## XML Usage
 ```
 <com.billshuai.timepicker.wheel.TextTimePicker
